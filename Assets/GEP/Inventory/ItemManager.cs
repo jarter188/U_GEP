@@ -4,5 +4,21 @@ using UnityEngine;
 
 public class ItemManager : MonoBehaviour
 {
-    public Item item;
+    public static ItemManager Instance;
+    public List<Item> Items = new List<Item>();
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+
+    public void Add(Item item)
+    {
+        Items.Add(item);
+    }
+
+    public void Remove(Item item)
+    {
+        Items.Remove(item);
+    }
 }
