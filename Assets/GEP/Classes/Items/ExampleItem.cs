@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class ExampleItem : MonoBehaviour, IPickupable
 {
-    gameObject.SendMessage()
+    /// <summary>
+    /// gameObject.SendMessage()
+    /// </summary
+    /// 
+
+    public Item Item;
 
     public void Pickup()
     {
