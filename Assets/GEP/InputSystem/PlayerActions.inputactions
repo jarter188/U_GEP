@@ -42,7 +42,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Inventory",
+                    "name": "Drop",
                     "type": "Button",
                     "id": "68e13797-9b9d-49f6-9fda-80863d272046",
                     "expectedControlType": "Button",
@@ -235,7 +235,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Inventory",
+                    "action": "Drop",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

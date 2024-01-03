@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class ExampleItem : MonoBehaviour, IPickupable
 {
-    /// <summary>
-    /// gameObject.SendMessage()
-    /// </summary
-    /// 
-
-    public Item Item;
+    GameObject ItemManager;
+    public ItemID ID;
+    
+    void Start()
+    {
+        ItemManager = GameObject.FindWithTag("ItemManagerTag");
+    }
 
     public void Pickup()
     {
-        ItemManager.Instance.Add(Item);
+        ItemManager.SendMessage("Add", ID);
         Destroy(gameObject);
     }
 }

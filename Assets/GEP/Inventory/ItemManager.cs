@@ -21,4 +21,9 @@ public class ItemManager : MonoBehaviour
     {
         Items.Remove(item);
     }
+
+    public void OnDrop(bool isPressed)
+    {
+        
+    }
 }

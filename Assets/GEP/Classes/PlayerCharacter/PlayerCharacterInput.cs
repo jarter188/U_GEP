@@ -36,9 +36,9 @@ public class PlayerCharacterInput : MonoBehaviour
         JumpInput(value.isPressed);
     }
 
-    public void OnInventory(InputValue value)
+    public void OnDrop(InputValue value)
     {
-
+        GameObject.FindWithTag("ItemManagerTag").GetComponent<ItemManager>().OnDrop(value.isPressed);
     }
 
     public void OnSprint(InputValue value)
