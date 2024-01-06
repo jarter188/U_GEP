@@ -3,32 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using Unity.VisualScripting;
 
 public class InventoryItem : MonoBehaviour
 {
     [Header("UI")]
     public Image image;
+    public GridLayout grid;
 
-    //public void On
-
-    
-    //[HideInInspector] public Transform parentAfterDrag;
-    //public void OnBeginDrag(PointerEventData eventData)
-    //{
-        //image.raycastTarget = false;
-     //   parentAfterDrag = transform.parent;
-      //  transform.SetParent(transform.root);
-    //}
-
-    //public void OnDrag(PointerEventData eventData)
-    //{
-        //transform.position = Input.mousePosition;
-        
-    //}
-
-    //public void OnEndDrag(PointerEventData eventData)
-    //{
-        //image.raycastTarget = true;
-        //transform.SetParent(parentAfterDrag);
-    //}
+    private void Start()
+    {
+        gameObject.transform.Find("Inv_Back");
+     
+    }
 }
