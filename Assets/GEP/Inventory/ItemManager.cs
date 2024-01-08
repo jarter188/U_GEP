@@ -7,6 +7,7 @@ public class ItemManager : MonoBehaviour
     public static ItemManager Instance;
     public List<ItemID> Items = new List<ItemID>();
     public GameObject player;
+    public Transform canvas;
 
     private void Awake()
     {
@@ -15,7 +16,9 @@ public class ItemManager : MonoBehaviour
 
     public void Add(ItemID item)
     {
+        canvas.GetComponent<InventoryItem>().AddNametoSlot(item);
         Items.Add(item);
+
     }
 
     public void Remove(ItemID item)
