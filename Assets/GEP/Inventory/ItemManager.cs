@@ -16,19 +16,20 @@ public class ItemManager : MonoBehaviour
 
     public void Add(ItemID item)
     {
-        canvas.GetComponent<InventoryItem>().AddNametoSlot(item);
+        canvas.GetComponent<InventoryUI>().AddNametoSlot(item);
         Items.Add(item);
-
     }
 
     public void Remove(ItemID item)
     {
+        canvas.GetComponent<InventoryUI>().RemoveNametoSlot(item);
         Items.Remove(item);
     }
 
     public void OnDrop(bool isPressed)
     {
         if (isPressed)
+
         {
             int ItemPos = Items.Count - 1;
             ItemID Item = Items[ItemPos];

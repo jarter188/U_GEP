@@ -7,43 +7,56 @@ using Unity.VisualScripting;
 using TMPro;
 using JetBrains.Annotations;
 
-public class InventoryItem : MonoBehaviour
+public class InventoryUI : MonoBehaviour
 {
     [Header("UI")]
     //public Image image;
     //public GridLayout grid;
-    public Transform ItemGrid;
-    
+    Transform ItemGrid;
+
     //public string title;
 
     private void Start()
     {
-        if (ItemGrid = gameObject.transform.Find("Inv_Back"))
-        {
-            Debug.Log("Wacky");
-        }
+
+        ItemGrid = gameObject.transform.Find("Inv_Back");
+
     }
 
     public void AddNametoSlot(ItemID item)
     {
-        
+        bool Ran = false;
+
         foreach (Transform itemSlot in ItemGrid)
         {
             Transform panel = itemSlot.transform.Find("Panel");
             Transform Name = panel.transform.Find("Item Title");
+            Transform Image = panel.transform.Find("Item Image");
+
             if (Name.GetComponent<TextMeshProUGUI>().text == "")
             {
-                Transform title = panel.transform.Find("Item Title");
-                if (title.GetComponent<TextMeshProUGUI>().text == "")
+                if (!Ran)
                 {
-                    title.GetComponent<TextMeshProUGUI>().text = item.Name;
-                    Debug.Log(item.Name);
+                    Name.GetComponent<TextMeshProUGUI>().text = item.ItemName;
+                    Image.GetComponent<Image>().sprite = item.image;
+                    Ran = true;
                 }
             }
+        }
+    }
 
-            if (itemSlot.transform.Find("Item Title"))
+    public void RemoveNametoSlot(ItemID item)
+    {
+       foreach (Transform itemSlot in ItemGrid)
+       {
+            Transform panel = itemSlot.transform.Find("Panel");
+            Transform Name = panel.transform.Find("Item Title");
+            Transform Image = panel.transform.Find("Item Image");
+
+            if (Name.GetComponent<TextMeshProUGUI>().text == item.ItemName)
             {
-                Debug.Log("temp text");
+                Name.GetComponent<TextMeshProUGUI>().text = "";
+                Image.GetComponent<Image>().sprite = null;
             }
         }
     }
