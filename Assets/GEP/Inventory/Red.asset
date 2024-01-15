@@ -16,3 +16,4 @@ MonoBehaviour:
   ItemName: Red
   prefab: {fileID: 8361059536530014995, guid: f837fb588b8a5a8498b5fa1a704df65e, type: 3}
   image: {fileID: 21300000, guid: fc72af5f0e92e2a43b424cefabb094ec, type: 3}
+  Description: This item is less boring and red

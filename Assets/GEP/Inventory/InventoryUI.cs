@@ -32,6 +32,7 @@ public class InventoryUI : MonoBehaviour
             Transform panel = itemSlot.transform.Find("Panel");
             Transform Name = panel.transform.Find("Item Title");
             Transform Image = panel.transform.Find("Item Image");
+            Transform Description = panel.transform.Find("Item Description");
 
             if (Name.GetComponent<TextMeshProUGUI>().text == "")
             {
@@ -39,6 +40,7 @@ public class InventoryUI : MonoBehaviour
                 {
                     Name.GetComponent<TextMeshProUGUI>().text = item.ItemName;
                     Image.GetComponent<Image>().sprite = item.image;
+                    Description.GetComponent<TextMeshProUGUI>().text = item.Description;
                     Ran = true;
                 }
             }

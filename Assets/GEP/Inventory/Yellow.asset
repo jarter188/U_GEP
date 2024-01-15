@@ -16,3 +16,4 @@ MonoBehaviour:
   ItemName: Yellow
   prefab: {fileID: 1125625607009126269, guid: 61b6decaede1c2146a08fb6c539a74d8, type: 3}
   image: {fileID: 21300000, guid: 8882898144a2edf49a1f61d23acb9d3e, type: 3}
+  Description: This item is happy and yellow

@@ -10,4 +10,5 @@ public class ItemID : ScriptableObject
     public string ItemName;
     public GameObject prefab;
     public Sprite image;
+    public string Description;
 }
