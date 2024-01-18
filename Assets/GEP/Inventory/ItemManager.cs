@@ -45,17 +45,18 @@ public class ItemManager : MonoBehaviour
         if (isPressed)
 
         {
-            // Reduces the array count by 1
+            // Reduces the 
             int ItemPos = Items.Count - 1;
-            // This is return removes the last member of the array.
+            // This is 
             ItemID Item = Items[ItemPos];
-            // An Instance is created 
+            // An Instance is created, which is an empty gameobject which is assigned the prefab of
+            // the item which just got removed from the array.
             GameObject itemInstance = Instantiate(Item.prefab);
             // Sets the items position in accordance to the player.
             itemInstance.transform.position = player.transform.position + player.transform.forward * 2;
             // Sets the scale of the object when it spawns in.
             itemInstance.transform.localScale = itemInstance.transform.localScale / 2;
-            // Removes Item from array.
+            // Removes Item Data of the object which was being removed from the array.
             Remove(Item);
         }    
     }
